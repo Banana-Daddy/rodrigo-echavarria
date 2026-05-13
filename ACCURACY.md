@@ -46,6 +46,16 @@ Items written for the mockup that need client confirmation before going live.
 2. **"The clay teaches patience. The hard court teaches violence. A player should learn both before they choose."** — written by me, used as the figcaption on the Direction A B&W plate and the headline pull-quote in Direction C. Same status — needs Rodrigo's approval.
 3. **"La arcilla enseña paciencia."** — written by me, used as the bilingual quote card overlay on the Direction C hero. Translates to "The clay teaches patience." (same sentiment as quote 2). Confirm approval.
 
+### Invented student testimonials — Direction B (Operator) only (high priority)
+
+The Operator now has a "The Work / Who he builds" section with three testimonial cards. **All three quotes, initials, and credentials are invented placeholder content** — they exist to show the section structure and design, not to be shipped as real testimonials. Before going live:
+
+- **J.M. — Junior tournament player · NJ · 2025** — Quote about serve rebuild and getting seeded for the first time. Replace with a real junior testimonial (with the parent's permission).
+- **D.K. — Returning player · 3.5 USTA · 2026** — Quote about returning to the game at 42 with shoulder issues and a hidden backhand. Replace with a real returning-adult testimonial.
+- **A.P. — Parent · D-I recruit family · 2024** — Parent's perspective on daughter's journey to college recruit list. Replace with a real parent testimonial.
+
+Initials format (J.M., D.K., A.P.) is intentionally generic. If real students/parents are happy to use full names, we should switch to first-name-last-initial (e.g., "Jordan M.") for stronger credibility. Years are aspirational dating that matches typical lesson timelines — replace with actual.
+
 ### Other invented framing
 
 - **"Rocko" as a nickname / wordmark** — sourced from his Canva site title (`tenniswithrodrigo`, page named "Rocko SIte"). Used as the central wordmark in Directions A and B. Confirm with Rodrigo that this is in fact his nickname and that he's comfortable having it as the brand identity.
@@ -72,9 +82,10 @@ Items written for the mockup that need client confirmation before going live.
 
 Errors caught and corrected before delivery.
 
-- **Direction A hero standfirst** — originally read "Eight years on the ATP & ITF circuit." This conflated his coaching tenure (8 years) with his playing tenure (4 years). Corrected to **"Four seasons on the ATP & ITF circuit. Former #1 in Colombia. A 49–44 career record on the dirt and the hard. Now, eight years into the next chapter, in Edison, New Jersey — teaching the next ones how to win."**
+- **Direction A hero standfirst** — originally read "Eight years on the ATP & ITF circuit." This conflated his coaching tenure (8 years) with his playing tenure (4 years). Corrected to "Four seasons on the ATP & ITF circuit. Former #1 in Colombia. ... Now, eight years into the next chapter, in Edison, New Jersey — teaching the next ones how to win."
 - **Direction A OG description** — same phrasing error in the social-share metadata. Fixed to match.
 - **Direction A Twitter description** — same. Fixed.
+- **Direction B (Operator) — W-L record removed everywhere per Zack's note** that it's not a standout stat. Removed from: bottom hero stat strip (replaced with "ATP·ITF"), Record stats third card (replaced with "4 / Seasons on Tour"), bio paragraph (removed the W-L sentence entirely), and the bio metadata "Surface: Clay (30–29)" → just "Clay". The career-high ranking is also no longer cited in body copy. Direction A still references the 49–44 record in its editorial story copy — leaving as is since that direction's voice is long-form journalistic and the record reads as biographical detail rather than a headline stat. Heredad never cited W-L. *If Rodrigo wants the W-L killed across all directions, easy follow-up edit.*
 
 ---
 
