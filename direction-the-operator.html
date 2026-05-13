@@ -191,6 +191,42 @@
     content: ''; position: absolute; top: 0; left: 0; width: 2px; height: 40px;
     background: linear-gradient(180deg, #CA8A04 0%, rgba(202, 138, 4, 0) 100%);
   }
+  /* Career arc timeline */
+  .arc-step::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+    width: 2px; background: rgba(202, 138, 4, 0.25);
+  }
+  .arc-step::after {
+    content: ''; position: absolute; left: -3px; top: 6px;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #0B0908; border: 2px solid rgba(202, 138, 4, 0.45);
+  }
+  .arc-step-now::before { background: #CA8A04; }
+  .arc-step-now::after {
+    background: #CA8A04;
+    border-color: #EAB308;
+    box-shadow: 0 0 0 4px rgba(202, 138, 4, 0.18);
+  }
+  /* Language toggle */
+  .lang-btn {
+    color: rgba(250, 250, 249, 0.5);
+    transition: color .3s ease, background .3s ease;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    cursor: pointer;
+    border: 0;
+  }
+  .lang-btn.active {
+    background: #CA8A04;
+    color: #0B0908;
+  }
+  .lang-btn:hover:not(.active) { color: #FAFAF9; }
+  [data-lang] { display: inline; }
+  [data-lang].hidden { display: none; }
+  /* For block-level lang containers */
+  div[data-lang], p[data-lang], h2[data-lang] { display: block; }
+  div[data-lang].hidden, p[data-lang].hidden, h2[data-lang].hidden { display: none; }
   ::selection { background: #CA8A04; color: #0B0908; }
 </style>
 </head>
@@ -353,6 +389,37 @@
           <p>Turned pro in 2018 and spent the next four seasons on the ATP and ITF circuits. Held the #1 ranking in Colombia. Worked with the country&rsquo;s national champions in the years before stepping off tour.</p>
           <p>Now eight years into a coaching career at Garden State Tennis Center &mdash; one of the most decorated teaching programs in the Northeast, with more than fifty ETA #1 juniors, three NCAA national champions, and players who have competed at the US Open, Wimbledon, and Roland Garros.</p>
           <p class="text-brass italic">He works in English and Spanish. He prefers the clay.</p>
+        </div>
+
+        <!-- The Arc — career timeline -->
+        <div class="mt-12 pt-10 border-t border-cream/15">
+          <div class="flex items-baseline justify-between mb-7">
+            <div class="stamp text-xs text-brass">The Arc</div>
+            <div class="stamp text-[0.6rem] text-cream/40">2018 &ndash; Now</div>
+          </div>
+
+          <ol class="grid grid-cols-2 lg:grid-cols-4 gap-y-7 gap-x-4">
+            <li class="arc-step relative pl-5">
+              <div class="display-num text-3xl md:text-4xl text-cream leading-none mb-2">2018</div>
+              <div class="stamp text-[0.62rem] text-brass mb-1.5">Pro Debut</div>
+              <div class="text-xs text-cream/55 leading-relaxed">First season on the ATP &amp; ITF circuit</div>
+            </li>
+            <li class="arc-step relative pl-5">
+              <div class="display-num text-3xl md:text-4xl text-cream leading-none mb-2">2018</div>
+              <div class="stamp text-[0.62rem] text-brass mb-1.5">Coaching</div>
+              <div class="text-xs text-cream/55 leading-relaxed">First lessons at Garden State Tennis Center</div>
+            </li>
+            <li class="arc-step relative pl-5">
+              <div class="display-num text-3xl md:text-4xl text-cream leading-none mb-2">2022</div>
+              <div class="stamp text-[0.62rem] text-brass mb-1.5">Off Tour</div>
+              <div class="text-xs text-cream/55 leading-relaxed">Final season on the international circuit</div>
+            </li>
+            <li class="arc-step arc-step-now relative pl-5">
+              <div class="display-num text-3xl md:text-4xl brass-text leading-none mb-2">Now</div>
+              <div class="stamp text-[0.62rem] text-brass mb-1.5">Director</div>
+              <div class="text-xs text-cream/70 leading-relaxed">Tournament Training &middot; eight years in</div>
+            </li>
+          </ol>
         </div>
 
         <dl class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-xs">
@@ -580,28 +647,49 @@
 <section id="book" class="relative border-b border-cream/10">
   <div class="max-w-[1440px] mx-auto px-5 md:px-10 py-20 md:py-32">
     <div class="grid md:grid-cols-12 gap-10 md:gap-16">
+
       <div class="md:col-span-5 reveal">
         <div class="brass-rule w-16 mb-6"></div>
-        <div class="stamp text-xs text-brass mb-6">Book</div>
-        <h2 class="display text-5xl md:text-8xl font-bold text-cream leading-[0.9]">Get on<br>the court.</h2>
-        <p class="mt-6 max-w-md text-cream/70 leading-relaxed">All scheduling runs through Garden State Tennis Center. Phone is fastest. Tournament-prep slots fill first.</p>
+        <div class="stamp text-xs text-brass mb-6">
+          <span data-lang="en">Book</span><span data-lang="es" class="hidden">Agendar</span>
+        </div>
+        <h2 class="display text-5xl md:text-8xl font-bold text-cream leading-[0.9]">
+          <span data-lang="en">Get on<br>the court.</span><span data-lang="es" class="hidden">A la<br>cancha.</span>
+        </h2>
+        <p class="mt-6 max-w-md text-cream/70 leading-relaxed">
+          <span data-lang="en">All scheduling runs through Garden State Tennis Center. Phone is fastest. Tournament-prep slots fill first.</span><span data-lang="es" class="hidden">Todas las reservas se gestionan a trav&eacute;s de Garden State Tennis Center. El tel&eacute;fono es lo m&aacute;s r&aacute;pido. Las plazas para torneos se llenan primero.</span>
+        </p>
       </div>
 
       <div class="md:col-span-7 reveal" style="transition-delay: 100ms;">
+
+        <!-- Language toggle -->
+        <div class="flex items-center justify-end gap-3 mb-5">
+          <span class="stamp text-[0.6rem] text-cream/40 whitespace-nowrap">
+            <span data-lang="en">Language</span><span data-lang="es" class="hidden">Idioma</span>
+          </span>
+          <div class="inline-flex items-center bg-shadow border border-cream/15 p-0.5 rounded-full" role="group" aria-label="Language selection">
+            <button type="button" data-toggle="en" class="lang-btn active px-3.5 py-1 text-[0.65rem] rounded-full focus-brass" aria-pressed="true">EN</button>
+            <button type="button" data-toggle="es" class="lang-btn px-3.5 py-1 text-[0.65rem] rounded-full focus-brass" aria-pressed="false">ES</button>
+          </div>
+        </div>
+
         <div class="border border-cream/20">
-          <a href="tel:+19082269300" class="flex items-center justify-between p-6 md:p-8 border-b border-cream/15 hover:bg-brass hover:text-coal transition-colors group">
+          <a href="tel:+19082269300" class="flex items-center justify-between p-6 md:p-8 border-b border-cream/15 hover:bg-brass hover:text-coal transition-colors group focus-brass">
             <div>
-              <div class="stamp text-xs text-cream/50 group-hover:text-coal/60 mb-2">Phone · Fastest</div>
+              <div class="stamp text-xs text-cream/50 group-hover:text-coal/60 mb-2">
+                <span data-lang="en">Phone &middot; Fastest</span><span data-lang="es" class="hidden">Tel&eacute;fono &middot; Lo m&aacute;s r&aacute;pido</span>
+              </div>
               <div class="display text-3xl md:text-5xl font-semibold">908.226.9300</div>
             </div>
-            <span class="display text-3xl" aria-hidden>→</span>
+            <span class="display text-3xl" aria-hidden>&rarr;</span>
           </a>
-          <a href="https://gardenstatetennis.com" target="_blank" rel="noopener" class="flex items-center justify-between p-6 md:p-8 border-b border-cream/15 hover:bg-coal/50 transition-colors group">
+          <a href="https://gardenstatetennis.com" target="_blank" rel="noopener" class="flex items-center justify-between p-6 md:p-8 border-b border-cream/15 hover:bg-coal/50 transition-colors group focus-brass">
             <div>
               <div class="stamp text-xs text-cream/50 mb-2">Online</div>
               <div class="display text-2xl md:text-3xl font-semibold">gardenstatetennis.com</div>
             </div>
-            <span class="display text-3xl text-cream/60" aria-hidden>↗</span>
+            <span class="display text-3xl text-cream/60" aria-hidden>&#8599;</span>
           </a>
           <div class="grid grid-cols-2 divide-x divide-cream/15">
             <div class="p-6 md:p-8">
@@ -609,11 +697,17 @@
               <div class="text-cream text-sm md:text-base">Garden State<br>Tennis Center</div>
             </div>
             <div class="p-6 md:p-8">
-              <div class="stamp text-xs text-cream/50 mb-2">Address</div>
+              <div class="stamp text-xs text-cream/50 mb-2">
+                <span data-lang="en">Address</span><span data-lang="es" class="hidden">Direcci&oacute;n</span>
+              </div>
               <div class="text-cream text-sm md:text-base">1 Villa Drive<br>Edison, NJ 08820</div>
             </div>
           </div>
         </div>
+
+        <p class="mt-4 stamp text-[0.6rem] text-cream/40 text-right">
+          <span data-lang="en">Coaching available in English &amp; Spanish</span><span data-lang="es" class="hidden">Entrenamiento disponible en ingl&eacute;s y espa&ntilde;ol</span>
+        </p>
       </div>
     </div>
   </div>
@@ -686,6 +780,31 @@
     }, { rootMargin: '-60px 0px 0px 0px', threshold: 0 });
     heroIO.observe(hero);
   }
+
+  // Language toggle for the Book section
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.toggle('hidden', el.dataset.lang !== lang);
+    });
+    document.querySelectorAll('[data-toggle]').forEach(btn => {
+      const isActive = btn.dataset.toggle === lang;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-pressed', String(isActive));
+    });
+    document.documentElement.lang = lang;
+    try { sessionStorage.setItem('rocko-lang', lang); } catch (e) {}
+  }
+  document.querySelectorAll('[data-toggle]').forEach(btn => {
+    btn.addEventListener('click', () => setLang(btn.dataset.toggle));
+  });
+  // Default — saved choice, else browser language, else English
+  (function initLang() {
+    let saved = null;
+    try { saved = sessionStorage.getItem('rocko-lang'); } catch (e) {}
+    if (saved === 'en' || saved === 'es') { setLang(saved); return; }
+    const userLang = (navigator.language || 'en').toLowerCase();
+    if (userLang.startsWith('es')) setLang('es');
+  })();
 </script>
 
 </body>
